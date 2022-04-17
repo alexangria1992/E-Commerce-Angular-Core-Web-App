@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Core_Angular.Models
 {
-    public class Post
+    public class Post : EntityBase
     {
-        public int Id { get; set; }
 
         public string Title { get; set; }
 

@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Core_Angular.Models
 {
-    public class Category : EntityBase
+    public class EntityBase
     {
+        public int Id { get; set; }
 
-        public string CategoryName { get; set; }
-
-        public virtual ICollection<Post> Posts { get; set; }
-
+        public DateTime CreatedDate { get; set; }
 
     }
 }
