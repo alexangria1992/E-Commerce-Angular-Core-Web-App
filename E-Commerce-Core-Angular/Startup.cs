@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
 
 namespace E_Commerce_Core_Angular
 {
@@ -27,6 +28,7 @@ namespace E_Commerce_Core_Angular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Models.AppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ECommerceCoreAngularEF")));
             // Add framework services.
             services.AddMvc();
         }
