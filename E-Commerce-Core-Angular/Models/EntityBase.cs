@@ -7,6 +7,11 @@ namespace E_Commerce_Core_Angular.Models
 {
     public class EntityBase
     {
+        public EntityBase()
+        {
+            CreatedDate = DateTime.Now;
+
+        }
         public int Id { get; set; }
 
         public DateTime CreatedDate { get; set; }
